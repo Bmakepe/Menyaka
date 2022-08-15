@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Menyaka"/>
+
+    <item
+        android:id="@+id/nav_explore"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Explore"/>
+
+    <item
+        android:id="@+id/nav_memory"
+        android:icon="@drawable/ic_baseline_camera_alt_24"
+        android:title="Nyakalla"/>
+
+    <item
+        android:id="@+id/nav_stores"
+        android:icon="@drawable/ic_store_dark"
+        android:title="Stores" />
+
+    <item
+        android:id="@+id/nav_messages"
+        android:icon="@drawable/ic_baseline_message_24"
+        android:title="Messages"/>
+
+</menu>

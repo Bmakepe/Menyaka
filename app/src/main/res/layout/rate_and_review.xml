@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reviewArea">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/rating_userImg"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorPrimaryDark"
+            android:src="@drawable/profile_png_1114185"
+            android:layout_margin="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/reviewDetails"
+            android:layout_marginEnd="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/rating_userImg">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_toStartOf="@+id/reviewTimeStamp"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/rating_username"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 days ago"
+                    android:layout_toStartOf="@+id/user_rating"
+                    android:textSize="12sp"
+                    android:singleLine="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="2dp"
+                    android:id="@+id/reviewTimeStamp"
+                    android:textColor="@color/black"/>
+
+                <RatingBar
+                    android:id="@+id/user_rating"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:numStars="5"
+                    android:rating="3.3"
+                    android:theme="@style/RatingBar"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_review"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:maxLines="3"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@id/reviewArea"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/white_greyish" />
+
+</RelativeLayout>

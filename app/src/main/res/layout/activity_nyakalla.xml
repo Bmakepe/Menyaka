@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".NyakallaActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/menyakaToolbar"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/share_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            app:tint="@color/white"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/userProPic"
+            android:layout_toEndOf="@+id/share_back"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            android:src="@drawable/profile_png_1114185"
+            android:padding="2dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            android:layout_toEndOf="@+id/userProPic"
+            android:layout_toStartOf="@+id/speak_now"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            android:lines="1"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+
+        <ImageView
+            android:id="@+id/speak_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_toStartOf="@+id/share_post"
+            android:src="@android:drawable/ic_btn_speak_now"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Share"
+            android:textSize="16sp"
+            android:drawablePadding="5dp"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:id="@+id/share_post"
+            android:layout_margin="5dp"
+            tools:ignore="UseCompatTextViewDrawableXml"
+            app:drawableTint="@color/white" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/menyakaToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textMessage"
+                    style="@style/parent"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:backgroundTint="@color/white"
+                    android:padding="5dp">
+
+                    <EditText
+                        android:id="@+id/caption_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/galleryBTN"
+                        android:background="@null"
+                        android:gravity="top|left"
+                        android:hint="@string/share_experience"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/white_greyish" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/imageCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="5dp"
+                        app:cardUseCompatPadding="false"
+                        tools:ignore="UnusedAttribute">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp">
+
+                            <ImageView
+                                android:id="@+id/preview_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="250dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_placholder_img"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/editImageBTN"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/rounded_edittext"
+                                android:drawablePadding="5dp"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_baseline_edit_24"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:drawableTint="@color/colorPrimary" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/videoCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:baselineAligned="false"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="5dp"
+                        app:cardUseCompatPadding="false"
+                        tools:ignore="UnusedAttribute">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="450dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/videoArea"
+                                android:layout_width="match_parent"
+                                android:layout_height="450dp"
+                                android:visibility="gone">
+
+                                <VideoView
+                                    android:id="@+id/previewCameraSelectedVideo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <ImageView
+                                android:id="@+id/editVideoBTN"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/rounded_edittext"
+                                android:drawablePadding="5dp"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_baseline_edit_24"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:drawableTint="@color/colorPrimary" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_toStartOf="@+id/storesTagger"
+                            android:layout_weight="4">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="5dp"
+                                tools:ignore="Suspicious0dp">
+
+                                <LinearLayout
+                                    android:id="@+id/audience_set"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/audience"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Privacy"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:singleLine="true"
+                                        android:textStyle="bold"
+                                        android:textSize="14sp"
+                                        android:drawablePadding="5dp"
+                                        app:drawableStartCompat="@drawable/ic_baseline_vpn_lock_24"
+                                        app:drawableTint="@color/colorPrimaryDark" />
+
+                                    <TextView
+                                        android:id="@+id/audience_picker"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Public"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="5dp"
+                                tools:ignore="Suspicious0dp">
+
+                                <LinearLayout
+                                    android:id="@+id/store_location"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tag_location"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/check_in"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textStyle="bold"
+                                        android:textSize="14sp"
+                                        android:drawablePadding="5dp"
+                                        app:drawableTint="@color/colorPrimaryDark"
+                                        app:drawableStartCompat="@drawable/ic_baseline_location_on_24" />
+
+                                    <TextView
+                                        android:id="@+id/locationCheckIn"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"
+                                        android:text="No Location"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:singleLine="true"/>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_add_photo_alternate_24"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:padding="10dp"
+                            android:id="@+id/galleryBTN"
+                            app:tint="@color/colorPrimaryDark" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_people_24"
+                            android:layout_toStartOf="@+id/galleryBTN"
+                            android:layout_centerVertical="true"
+                            android:padding="10dp"
+                            android:id="@+id/friendsTagger"
+                            app:tint="@color/colorPrimaryDark" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_store_dark"
+                            android:layout_toStartOf="@+id/friendsTagger"
+                            android:layout_centerVertical="true"
+                            android:padding="10dp"
+                            android:id="@+id/storesTagger"
+                            app:tint="@color/colorPrimaryDark" />
+
+                    </RelativeLayout>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/people_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tag_people"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tag_friends"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:drawablePadding="5dp"
+                        android:drawableTint="@color/white"
+                        app:drawableEndCompat="@drawable/ic_baseline_people_24" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/friendsRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_marginTop="15dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:background="@color/white_greyish" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/store_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tagStoreBTN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tag Store(s)"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:drawablePadding="5dp"
+                        app:drawableEndCompat="@drawable/ic_store_dark"
+                        app:drawableTint="@color/white" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/taggedStoresRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_marginTop="15dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:background="@color/white_greyish" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

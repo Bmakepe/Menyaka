@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_alignParentTop="true"
+        android:id="@+id/shopChatToolbar"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:id="@+id/mess_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:layout_alignParentStart="true"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                app:tint="@color/colorPrimary"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:id="@+id/messBackBTN"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/shop_name_msg"
+                android:layout_toEndOf="@+id/messBackBTN"
+                android:text="Shop Name"
+                android:textColor="@color/black"
+                android:layout_toStartOf="@+id/messSearchBTN"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/delete_icon"
+                android:visibility="gone"
+                android:id="@+id/msgDeleteBTN"
+                app:tint="#000000" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shopChatsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shopChatToolbar"
+        android:layout_above="@+id/bottom"
+        android:scrollbars="none"
+        android:background="@color/white"/>
+
+    <ProgressBar
+        android:id="@+id/determinateBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:progressTint="@color/colorPrimary"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone"
+        android:progress="0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/bottom">
+
+        <ImageView
+            android:id="@+id/mediaRecycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="200dp"
+            android:maxWidth="200dp"
+            android:visibility="gone"
+            android:scrollbars="none"
+            android:background="@color/black"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom"
+        android:background="@color/white_greyish"
+        android:padding="4dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/gallery_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_gallery_add_24"
+            android:background="@drawable/attach_msg"
+            android:tint="@color/colorPrimary"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/record_audio"
+            android:visibility="visible"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/gallery_btn"
+            android:minHeight="40dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/add_message"
+            android:inputType="textMultiLine"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:hint="Write your message"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/text_msg"
+            android:layout_toStartOf="@+id/msg_btns"/>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/msg_btns">
+
+            <ImageButton
+                android:id="@+id/msg_post"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_send_24"
+                android:tint="@color/white"
+                android:background="@drawable/btn_msg"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/send_message"
+                android:visibility="gone"/>
+
+            <ImageButton
+                android:id="@+id/rec_audio"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_mic_24"
+                android:background="@drawable/btn_msg"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/record_audio"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

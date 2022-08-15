@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shippingAgents"
+        android:layout_toStartOf="@+id/ratingArea">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:id="@+id/shippingName"
+            android:text="Kayhil Logistics"
+            android:singleLine="true"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:id="@+id/ratingArea">
+
+        <RatingBar
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:id="@+id/shipperRating"
+            android:rating="2.5"
+            android:padding="8dp"
+            android:theme="@style/RatingBar"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            android:id="@+id/viewShipper"
+            android:layout_gravity="center_vertical"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

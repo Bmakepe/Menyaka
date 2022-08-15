@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:backgroundTint="@color/white"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="2dp"
+    app:cardUseCompatPadding="false"
+    tools:ignore="UnusedAttribute">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/item_img_holder"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="5dp" >
+
+            <ImageView
+                android:id="@+id/item_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/menyaka"
+                android:scaleType="fitXY"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:layout_toEndOf="@+id/item_img_holder"
+            android:id="@+id/sponsorHeader">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Cuban Linx"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:id="@+id/sponsorShop"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Sponsored Ad"
+                android:layout_alignParentEnd="true"
+                android:textStyle="italic"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:singleLine="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".50"
+            android:id="@+id/adDetails"
+            android:layout_toEndOf="@+id/item_img_holder"
+            android:layout_below="@+id/sponsorHeader"
+            android:layout_toStartOf="@+id/postAddToCard"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Belvedere 750ml"
+                android:textSize="12sp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/original_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Was : M 45.50"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:foreground="@drawable/strike_through"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/adDetails"
+            android:paddingStart="5dp"
+            android:layout_toEndOf="@+id/item_img_holder">
+
+            <TextView
+                android:id="@+id/discounted_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="bottom"
+                android:text="Now : M39.20"
+                android:textSize="12sp"
+                android:layout_toStartOf="@+id/expiryDate"
+                android:singleLine="true"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/expiryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="bottom"
+                android:text="Expires 25 June 2021"
+                android:textSize="12sp"
+                android:layout_alignParentEnd="true"
+                android:singleLine="true"
+                android:textColor="@color/colorAccent"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/postAddToCard"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_shopping_cart_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

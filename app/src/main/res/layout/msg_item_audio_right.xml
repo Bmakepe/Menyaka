@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        tools:ignore="RtlHardcoded"
+        android:layout_marginEnd="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/textArea">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginStart="3dp"
+                android:layout_gravity="end">
+
+                <me.jagar.chatvoiceplayerlibrary.VoicePlayerView
+                    android:id="@+id/showAudioMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="3dp"
+                    app:enableVisualizer="false"
+                    app:visualizationPlayedColor="@color/colorPrimary"
+                    app:visualizationNotPlayedColor="#727171"
+                    app:playPauseBackgroundColor="#FFC107"
+                    app:timingBackgroundColor="@color/white"
+                    app:seekBarProgressColor="@color/white"
+                    app:showShareButton="false"
+                    app:shareCornerRadius="10"
+                    app:playPauseCornerRadius="10"
+                    app:showTiming="true"
+                    app:viewCornerRadius="10"
+                    app:viewBackground="@color/colorPrimary"
+                    app:progressTimeColor="#000"
+                    app:seekBarThumbColor="#FFC107"
+                    app:shareBackgroundColor="@color/colorPrimary"
+                    app:playProgressbarColor="@color/colorPrimary"
+                    app:shareText="SHARE ME"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_gravity="right"
+                    android:padding="2dp"
+                    android:id="@+id/chatTimeStamp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_below="@id/showAudioMsg"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/msg_pic"
+            android:src="@drawable/profile_png_1114185"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="1dp"
+            app:civ_border_overlay="true"
+            android:layout_toRightOf="@id/textArea"
+            android:layout_centerVertical="false"
+            android:layout_marginRight="15dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileToolbar"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mobileBackBtn"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:padding="5dp"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"
+            android:layout_margin="5dp"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/proceedPaymentArea">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:alpha=".1"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detailsArea">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/background_gradient"
+                    android:alpha=".5"/>
+
+                <View
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorPrimaryDark" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="120dp"
+                app:cardElevation="1dp"
+                android:id="@+id/mobileDetails"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="5dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/paymentLogo"
+                    android:src="@drawable/mpesa_logo"
+                    android:scaleType="fitCenter"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/mobileDetails"
+                android:padding="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/merchantArea">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/mechantHeadings">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mechant Name"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_gravity="end"
+                            android:layout_margin="5dp"/>
+
+                        <View
+                            android:layout_marginStart="5dp"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimaryDark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mechant Number"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:padding="10dp"
+                            android:layout_margin="5dp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toEndOf="@+id/mechantHeadings">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:id="@+id/merchantName"
+                            android:layout_margin="5dp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:id="@+id/merchantNumber"
+                                android:layout_margin="5dp"
+                                android:layout_toStartOf="@+id/copyMerchant"/>
+
+                            <View
+                                android:layout_marginEnd="5dp"
+                                android:layout_gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorPrimaryDark" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_content_copy_24"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:id="@+id/copyMerchant"
+                                app:tint="@color/black" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_above="@+id/processDirections"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/merchantArea"
+                    android:text="Please take note of the merchant details as you are about the process their payment. Below are the instructions on how to process the payment.
+                            \n 1. Select to option 4: Ecocash
+                            \n 2. \n 3. \n 4. \n 5. \n 6."
+                    android:layout_above="@+id/phoneConfirmTV"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:id="@+id/processDirections"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"/>
+
+                <View
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_below="@+id/processDirections"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/phoneNoTIL">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Enter your number"
+                        android:textColorHint="@color/colorWhite"
+                        android:textColor="@color/black"
+                        android:id="@+id/phoneNumberArea"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:drawableStart="@drawable/ic_baseline_local_phone_24"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:inputType="number"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        android:background="@null"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NOTE: Please confirm the number you will be using to process the payment."
+                    android:maxLines="2"
+                    android:textStyle="italic"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:layout_above="@+id/phoneNoTIL"
+                    android:id="@+id/phoneConfirmTV"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/proceedPaymentArea"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:textSize="18sp"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:id="@+id/processPayment"
+            android:layout_margin="5dp"
+            app:drawableTint="@color/white"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

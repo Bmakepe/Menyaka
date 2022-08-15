@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "504936663423",
+    "firebase_url": "https://menyaka-21882.firebaseio.com",
+    "project_id": "menyaka-21882",
+    "storage_bucket": "menyaka-21882.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504936663423:android:2ea2b22a5d1955aa60324a",
+        "android_client_info": {
+          "package_name": "com.example.menyaka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504936663423-ccqdieh8asousvn2ohgmi69d2csurves.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.menyaka",
+            "certificate_hash": "cbbcfa8236c04142bc8bc4e11ea28cbbef32350a"
+          }
+        },
+        {
+          "client_id": "504936663423-47e9svs84htm3gdvlun0leksc84e93lc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcmQwHHYXeWEN26KvHOTK40cyasIZWmTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504936663423-47e9svs84htm3gdvlun0leksc84e93lc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

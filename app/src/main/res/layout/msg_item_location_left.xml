@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/chatProPic"
+        android:src="@drawable/profile_png_1114185"
+        app:civ_border_color="@color/colorPrimaryDark"
+        android:layout_marginTop="5dp"
+        app:civ_border_width="1dp"
+        app:civ_border_overlay="true"
+        android:layout_centerVertical="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@+id/chatProPic"
+        android:id="@+id/textArea">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp">
+
+            <Button
+                android:background="@drawable/background_edit_btn"
+                android:backgroundTint="@color/colorRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewLocation"
+                android:padding="5dp"
+                android:text="View Location"
+                android:drawableEnd="@drawable/ic_baseline_location_on_24"
+                android:drawableTint="@color/white"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_gravity="start"
+            android:textStyle="normal"
+            android:id="@+id/chatTimeStamp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/seenTicks"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_baseline_remove_red_eye_24"/>
+
+</RelativeLayout>

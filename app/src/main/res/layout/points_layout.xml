@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/productcv1"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/wish_item_pic"
+                    android:layout_width="140dp"
+                    android:layout_height="135dp"
+                    android:elevation="5dp"
+                    android:scaleType="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar3"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/wish_item_pic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_marginEnd="0dp"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"
+                android:id="@+id/wish_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Product name"  />
+
+            <TextView
+                android:fontFamily="sans-serif"
+                android:id="@+id/wish_product_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rs. 400"
+                android:textSize="15sp" />
+
+            <TextView
+                android:fontFamily="sans-serif-condensed-light"
+                android:id="@+id/wish_shop_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Retailer Name"
+                android:textColor="#388e3c"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvProductDesc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:maxLines="3"
+                android:text="TextView"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageButton
+                    android:layout_marginEnd="5dp"
+                    android:id="@+id/wish_list_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/transparent_circle_with_border"
+                    android:textAllCaps="false"
+                    android:src="@drawable/ic_baseline_favorite_border_24"
+                    android:padding="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:padding="5dp"
+                    android:id="@+id/btn_buynow_productlis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/transparent_circle_with_border"
+                    android:text="Buy now"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+
+                <ImageButton
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/wish_add_to_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/transparent_circle_with_border"
+                    android:textAllCaps="false"
+                    android:src="@drawable/ic_baseline_add_shopping_cart_24"
+                    android:padding="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ADABAB" />
+
+</LinearLayout>

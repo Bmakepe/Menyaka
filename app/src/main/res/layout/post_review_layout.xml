@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/profileAppBAr"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            android:id="@+id/profileCollapsingToolbar"
+            android:background="@drawable/ctr_bg">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ratingBackBTN"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:src="@drawable/ic_arrow_back_black_24dp"
+                                app:tint="@color/white"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:textStyle="bold"
+                                android:singleLine="true"
+                                android:layout_toEndOf="@id/ratingBackBTN"
+                                android:id="@+id/ratingHeader"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"/>
+
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/viewPicArea"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:id="@+id/ratingProPic"
+                            android:src="@drawable/profile_png_1114185"
+                            android:tint="@color/white"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="3dp"
+                            app:civ_border_overlay="true"
+                            app:civ_circle_background_color="@color/white"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Send Us Your Feedback"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:textAlignment="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please Kindly Rate Your Experience below"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/shopRating"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:theme="@style/RatingBar"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="Do you have a suggestion? Please write to us and tell us where we can improve our services to best suit your needs"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:padding="5dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textMessage"
+                style="@style/parent"
+                android:background="@drawable/transparent_circle_with_border"
+                android:padding="5dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/ratingET"
+                    style="@style/modifiedEditText"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10"
+                    android:lines="10"
+                    android:gravity="top|left"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:textSize="12sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:id="@+id/rateCounter"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post Review"
+            android:textSize="18sp"
+            android:drawablePadding="5dp"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:id="@+id/postRatingFAB"
+            android:layout_margin="5dp"
+            tools:ignore="UseCompatTextViewDrawableXml"
+            app:drawableTint="@color/white" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

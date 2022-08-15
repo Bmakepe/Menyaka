@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/drawable-xxxhdpi/button_selector.xml" value="0.11" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/drawable/attach_msg.xml" value="0.11" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/drawable/btn_msg.xml" value="0.11" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/drawable/transparent_hallow_circle.xml" value="0.137" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/activity_change_number.xml" value="0.25" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/activity_insta_style.xml" value="0.2111111111111111" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/activity_message.xml" value="0.22" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/activity_profile_interactions_setup.xml" value="0.35520833333333335" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/activity_register.xml" value="0.15555555555555556" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/activity_shop_category.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/activity_verify_phone.xml" value="0.2563405797101449" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/activity_view_profile.xml" value="0.34270833333333334" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/fragment_dynamic.xml" value="0.34564102564102567" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/fragment_stores.xml" value="0.25277777777777777" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/msg_item_location_left.xml" value="0.35520833333333335" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/msg_item_location_right.xml" value="0.35520833333333335" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/recycler_view_layout.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/shop_item_layout.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Makepe/Desktop/New folder/Menyaka/Menyaka/app/src/main/res/layout/user_interaction_item.xml" value="0.35520833333333335" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

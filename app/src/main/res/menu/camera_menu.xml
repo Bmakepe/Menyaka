@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/main_menu_gallery"
+        android:icon="@drawable/ic_gallery_24"
+        android:title="Gallery"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/main_menu_about"
+        android:icon="@drawable/hot_deal"
+        android:title="About"
+        app:showAsAction="always" />
+
+</menu>

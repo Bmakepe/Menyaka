@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Profile Options">
+
+        <Preference
+            app:key="profile"
+            app:title="Edit Profile"
+            android:icon="@drawable/ic_person_black_24dp"
+            app:useSimpleSummaryProvider="true">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.example.menyaka"
+                android:targetClass="com.example.menyaka.EditProfileActivity"/>
+
+        </Preference>
+
+        <Preference
+            app:key="orders"
+            app:title="Shopping History"
+            android:icon="@drawable/ic_baseline_shopping_bag_24"
+            app:useSimpleSummaryProvider="true">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.example.menyaka"
+                android:targetClass="com.example.menyaka.MyOrdersActivity"/>
+
+        </Preference>
+
+        <Preference
+            app:key="wishlist"
+            app:title="Wish List"
+            android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+            app:useSimpleSummaryProvider="true">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.example.menyaka"
+                android:targetClass="com.example.menyaka.WishListActivity"/>
+
+        </Preference>
+
+        <Preference
+            app:key="tracking"
+            app:title="Track My Orders"
+            android:icon="@drawable/ic_baseline_moped_24"
+            app:useSimpleSummaryProvider="true">
+
+        </Preference>
+
+        <Preference
+            app:key="address"
+            app:title="View My Addresses"
+            android:icon="@drawable/ic_baseline_location_on_24"
+            app:useSimpleSummaryProvider="true">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.example.menyaka"
+                android:targetClass="com.example.menyaka.AddressActivity"/>
+
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

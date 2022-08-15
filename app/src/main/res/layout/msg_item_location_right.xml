@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        tools:ignore="RtlHardcoded"
+        android:layout_marginEnd="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/textArea">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="end">
+
+                <Button
+                    android:id="@+id/viewLocation"
+                    android:background="@drawable/background_edit_btn"
+                    android:backgroundTint="@color/colorRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Location"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                    android:drawableTint="@color/white"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:layout_gravity="end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_gravity="start"
+                    android:textStyle="italic"
+                    android:padding="2dp"
+                    android:layout_toStartOf="@+id/seenTicks"
+                    android:text="2 mins ago"
+                    android:id="@+id/chatTimeStamp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/seenTicks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_baseline_remove_red_eye_24" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/chatProPic"
+            android:src="@drawable/profile_png_1114185"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="1dp"
+            app:civ_border_overlay="true"
+            android:layout_toRightOf="@id/textArea"
+            android:layout_centerVertical="false"
+            android:layout_marginRight="15dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

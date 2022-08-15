@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/msg_pic"
+        android:src="@drawable/profile_png_1114185"
+        app:civ_border_color="@color/colorPrimaryDark"
+        android:layout_marginTop="5dp"
+        app:civ_border_width="1dp"
+        app:civ_border_overlay="true"
+        android:layout_centerVertical="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@+id/msg_pic"
+        android:id="@+id/textArea">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="2dp"
+            android:layout_marginStart="5dp">
+
+            <TextView
+                android:background="@drawable/text_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/showMsg"
+                android:padding="8dp"
+                android:textColor="#ffffff"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="5dp"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_gravity="start"
+                android:text="14 minutes ago"
+                android:layout_below="@id/showMsg"
+                android:textStyle="italic"
+                android:id="@+id/msg_time"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

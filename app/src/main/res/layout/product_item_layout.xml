@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:backgroundTint="@color/white"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="2dp"
+    app:cardUseCompatPadding="false"
+    tools:ignore="UnusedAttribute">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/productImage"
+                android:src="@drawable/menyaka"
+                android:alpha=".9"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20% Off"
+                android:background="@drawable/background_edit_btn"
+                android:padding="5dp"
+                android:backgroundTint="@color/colorRed"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                tools:ignore="SmallSp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4D000000"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/productStore"
+                    android:textColor="#FFFFFF"
+                    android:textAlignment="center"
+                    android:singleLine="true"
+                    android:layout_marginStart="10dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/productName"
+                    android:textColor="#FFFFFF"
+                    android:textAlignment="center"
+                    android:singleLine="true"
+                    android:layout_marginStart="10dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/product_logo_Store"
+                app:civ_border_width="2dp"
+                android:src="@drawable/profile_png_1114185"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_circle_background_color="@color/colorWhite"
+                android:layout_margin="5dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:id="@+id/productDescription"
+                    android:layout_marginStart="2dp"
+                    android:layout_toStartOf="@+id/productPrice"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/productPrice"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="10sp"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+            </RelativeLayout>
+
+            <RatingBar
+                android:id="@+id/product_rating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:theme="@style/RatingBar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:singleLine="true"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                android:id="@+id/proRatingCounter"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

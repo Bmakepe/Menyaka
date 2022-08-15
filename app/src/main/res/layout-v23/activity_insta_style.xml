@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtherCameraActivity">
+
+    <com.wonderkiln.camerakit.CameraView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cameraKit"
+        android:adjustViewBounds="true"
+        app:ckFacing="back"
+        app:ckFlash="off"
+        app:ckFocus="continuous"
+        app:ckMethod="standard"
+        app:ckZoom="pinch"
+        app:ckPermissions="strict"
+        app:ckCropOutput="true"
+        app:ckJpegQuality="100"
+        app:ckVideoQuality="highest"/>
+
+    <RelativeLayout
+        android:id="@+id/camera_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            app:tint="@color/white"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:id="@+id/cameraBackBTN"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_photo_filter_24"
+            app:tint="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:id="@+id/filterBTN"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTint="@color/white"
+            android:text="SKIP"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:drawablePadding="5dp"
+            app:tint="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:id="@+id/skipCamBTN"
+            app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_24" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_margin="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/transparent_circle_with_border"
+            android:backgroundTint="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/record_circle"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:id="@+id/conditionIcon"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIDEO"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:id="@+id/camTypeBTN"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent_circle_with_border"
+                android:backgroundTint="@color/white"
+                app:tint="@color/white"
+                android:src="@drawable/ic_baseline_flash_off_24"
+                android:id="@+id/switchFlashButton"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/takePic"
+                android:layout_margin="5dp"
+                android:padding="15dp"/>
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/transparent_hallow_circle"
+                android:src="@drawable/ic_baseline_camera_24"
+                android:backgroundTint="@color/white"
+                android:id="@+id/takePic"
+                android:layout_toEndOf="@+id/flipCamera"
+                android:padding="15dp"
+                android:visibility="visible"
+                app:tint="@color/white"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent_circle_with_border"
+                android:backgroundTint="@color/white"
+                app:tint="@color/white"
+                android:layout_margin="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_flip_camera_android_24"
+                android:id="@+id/flipCamera"
+                android:padding="15dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+

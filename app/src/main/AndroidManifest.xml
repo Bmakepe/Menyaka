@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.menyaka">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SharePostActivity"></activity>
+        <activity android:name=".ProfileInteractionsSetupActivity" />
+        <activity android:name=".ProfileBuildActivity" />
+        <activity android:name=".FullScreenVideoActivity" />
+        <activity android:name=".VideoFullScreenActivity" />
+        <activity android:name=".VideoCommentActivity" />
+        <activity android:name=".VideoMomentActivity" />
+        <activity android:name=".Utils.TesterActivity" />
+        <activity android:name=".SubCategoriesActivity" />
+        <activity android:name=".MyStoresActivity" />
+        <activity android:name=".AffliatesActivity" />
+        <activity android:name=".WishListActivity" />
+        <activity android:name=".FeedbackActivity" />
+        <activity android:name=".ContactsActivity" />
+        <activity android:name=".ChangeNumberActivity" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".RedeemPointsActivity" />
+        <activity android:name=".LoyaltyActivity" />
+        <activity android:name=".MyOrdersActivity" />
+        <activity android:name=".InteractionsActivity" />
+        <activity android:name=".AgentProfileActivity" />
+        <activity android:name=".NotificationsActivity" />
+        <activity android:name=".HotDealActivity" />
+        <activity android:name=".ProductListActivity" />
+        <activity android:name=".ReviewActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".Share.LocationActivity" />
+        <activity android:name=".OtherCameraActivity" />
+        <activity android:name=".AddressActivity" />
+        <activity android:name=".NyakallaActivity" />
+        <activity android:name=".OrderDetailsActivity" />
+        <activity android:name=".OrderReviewActivity" />
+        <activity android:name=".CardPaymentActivity" />
+        <activity android:name=".MobilePaymentActivity" />
+        <activity android:name=".CartStoreActivity" />
+        <activity android:name=".NewAddressActivity" />
+        <activity android:name=".OrderSummaryActivity" />
+        <activity android:name=".DeliveryOptionsActivity" />
+        <activity android:name=".PaymentPlanActivity" />
+        <activity android:name=".CategoryStockActivity" />
+        <activity android:name=".ShopCategoryActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".ProductDetailActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".MoreReviewsActivity" />
+        <activity android:name=".MoreProductActivity" />
+        <activity android:name=".MoreBusinessActivity" />
+        <activity android:name=".ShopDetailsActivity" />
+        <activity android:name=".Share.TaggingActivity" />
+        <activity android:name=".Share.FullScreenImageActivity" />
+        <activity android:name=".Share.NextScreenActivity" />
+        <activity android:name=".Share.MenyakaActivity" />
+        <activity android:name=".MomentActivity" />
+        <activity android:name=".MessageActivity" />
+        <activity android:name=".ViewProfileActivity" />
+        <activity android:name=".CommentsActivity" />
+        <activity android:name=".HotDealDetailActivity" />
+        <activity android:name=".PostDetailActivity" />
+        <activity android:name=".LoadingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD3XYV2rytb1r_967e7YcvGuce10WAEtzE" />
+
+        <service
+            android:name=".FCMService"
+            android:enabled="false"
+            android:exported="false" />
+
+        <activity android:name=".ShopActivity" />
+        <activity android:name=".PostActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".VerifyPhoneActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

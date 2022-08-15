@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".VideoFullScreenActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_alignParentTop="true"
+        android:id="@+id/fullScreenVideoToolbar"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:id="@+id/fullScreenVideo_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:layout_alignParentStart="true"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                app:tint="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:id="@+id/fullScreenVideoBackBTN"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_toEndOf="@+id/fullScreenVideoBackBTN"
+                android:layout_toStartOf="@+id/fullScreenVideoMenu">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/profile_png_1114185"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="2dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/fullScreenVideo_ProfilePic"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fullScreenVideoTitle"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_more_vert_24"
+                android:visibility="visible"
+                android:id="@+id/fullScreenVideoMenu"
+                app:tint="#000000" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fullScreenVideoArea"
+        android:visibility="visible"
+        android:layout_below="@+id/fullScreenVideoToolbar"
+        android:layout_centerVertical="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_seeker">
+
+            <VideoView
+                android:id="@+id/fullScreenVideoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00FFFFFF"
+                android:visibility="visible"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fullScreenBufferProgress"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            android:id="@+id/bottom_seeker"
+            android:background="@color/gray">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_play_arrow_24"
+                android:padding="5dp"
+                android:layout_alignParentStart="true"
+                android:id="@+id/fullScreenVideoPlayBTN"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/fullScreenVideoPlayBTN"
+                android:layout_centerVertical="true"
+                android:id="@+id/fullScreenOnGoingDuration"/>
+
+            <ProgressBar
+                android:id="@+id/fullScreenVideoSeekbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:progressTint="@color/white"
+                android:layout_toStartOf="@+id/fullScreenTotalDuration"
+                android:layout_toEndOf="@+id/fullScreenOnGoingDuration"
+                android:layout_centerVertical="true"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="581dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/fullScreenVolumeBTN"
+                android:id="@+id/fullScreenTotalDuration"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_volume_off_24"
+                android:id="@+id/fullScreenVolumeBTN"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/fullScreenVideoMenuBTN"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_more_vert_24"
+                android:id="@+id/fullScreenVideoMenuBTN"
+                android:layout_alignParentEnd="true"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

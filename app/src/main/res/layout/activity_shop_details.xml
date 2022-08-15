@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/shop_rating_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                app:tint="@color/colorPrimary"/>
+
+            <ImageView
+                android:id="@+id/viewCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                app:tint="@color/colorPrimary"
+                android:layout_toStartOf="@+id/shopMenu"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/shopMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_more_vert_24"
+                app:tint="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileAppBAr"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                android:id="@+id/profileCollapsingToolbar"
+                android:background="@drawable/ctr_bg">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="2dp"
+                        app:cardCornerRadius="0dp"
+                        android:background="@color/white">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/shop_detail_header"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:id="@+id/storeDetailsArea"
+                                    android:layout_marginStart="5dp">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:id="@+id/storeImage"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:src="@drawable/profile_png_1114185"
+                                        app:civ_border_width="0.5dp"
+                                        app:civ_border_color="@color/colorPrimaryDark"
+                                        app:civ_circle_background_color="@color/white" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_centerVertical="true"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_toEndOf="@+id/storeImage">
+
+                                        <TextView
+                                            android:id="@+id/location_area"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Maseru, Pioneer Mall"
+                                            android:textSize="14sp"/>
+
+                                        <RatingBar
+                                            android:id="@+id/shopRatingBar"
+                                            style="@style/Widget.AppCompat.RatingBar.Small"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:numStars="5"
+                                            android:theme="@style/RatingBar" />
+
+                                        <TextView
+                                            android:id="@+id/number_of_ratings1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="12sp"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="5dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_baseline_verified_24"
+                                        android:id="@+id/verifiedStore"
+                                        app:tint="@color/colorGold"
+                                        android:visibility="gone"/>
+
+                                    <TextView
+                                        android:id="@+id/retailStoreName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="16sp"
+                                        android:maxLength="30"
+                                        android:layout_gravity="center_vertical"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorPrimaryDark"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/divider"
+                                android:layout_below="@id/shop_detail_header"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:background="@color/white_greyish" />
+
+                            <LinearLayout
+                                android:id="@+id/shop_detail_desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_below="@id/divider"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp">
+
+                                <TextView
+                                    android:id="@+id/shop_desc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/dummy_text"
+                                    android:layout_gravity="start|center|end"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:baselineAligned="false"
+                                    android:background="@drawable/transparent_circle_with_border"
+                                    android:backgroundTint="@color/white"
+                                    android:layout_margin="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        tools:ignore="Suspicious0dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/colorPrimary"
+                                            android:alpha=".9">
+
+                                            <TextView
+                                                android:id="@+id/addToStore"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/add_to_favourates"
+                                                android:padding="5dp"
+                                                android:textAllCaps="false"
+                                                android:layout_centerHorizontal="true"
+                                                android:textColor="@color/white"
+                                                android:textSize="14sp"
+                                                android:drawableTint="@color/white"
+                                                android:drawablePadding="2dp"
+                                                android:textStyle="bold"
+                                                app:drawableStartCompat="@drawable/ic_baseline_favorite_border_24" />
+
+                                        </RelativeLayout>
+
+                                    </RelativeLayout>
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:background="@color/white"/>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        tools:ignore="Suspicious0dp"  >
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/colorPrimary"
+                                            android:alpha=".9">
+
+                                            <TextView
+                                                android:id="@+id/browseStoreCategories"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Categories"
+                                                android:padding="5dp"
+                                                android:textAllCaps="false"
+                                                android:layout_centerHorizontal="true"
+                                                android:textColor="@color/white"
+                                                android:textSize="14sp"
+                                                android:textStyle="bold"
+                                                android:drawablePadding="2dp"
+                                                app:drawableStartCompat="@drawable/ic_store_dark"
+                                                app:drawableTint="@color/white" />
+
+                                        </RelativeLayout>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/storeTabLayout"
+                android:background="@color/white"
+                app:tabSelectedTextColor="@color/colorPrimaryDark"
+                app:tabIndicatorColor="@color/colorPrimaryDark"
+                app:tabIndicatorHeight="2dp"
+                android:overScrollMode="ifContentScrolls"
+                app:tabMode="fixed"
+                app:tabTextColor="@color/colorPrimaryDark" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:id="@+id/storeViewPager" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

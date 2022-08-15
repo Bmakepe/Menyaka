@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        android:background="@drawable/ctr_bg"
+        android:id="@+id/viewProfileToolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewProfileBackBTN"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:padding="5dp"
+                android:layout_alignParentStart="true"
+                android:visibility="visible"
+                android:layout_centerVertical="true"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewProfileMenu"
+                android:src="@drawable/ic_baseline_more_vert_24"
+                android:padding="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                app:tint="@color/colorPrimaryDark" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileAppBAr"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                android:id="@+id/profileCollapsingToolbar"
+                android:background="@drawable/ctr_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/viewPicArea"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/profile_png_1114185"
+                                android:id="@+id/viewProfilePicture"
+                                app:civ_border_width="3dp"
+                                app:civ_border_color="@color/colorPrimaryDark"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/viewProfilePicture">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_baseline_verified_24"
+                                        android:id="@+id/hisVerification"
+                                        app:tint="@color/colorGold"
+                                        android:padding="5dp"
+                                        android:visibility="visible"/>
+
+                                    <TextView
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/black"
+                                        android:id="@+id/viewProfileName"
+                                        android:textAllCaps="true"
+                                        android:textStyle="bold"
+                                        android:singleLine="true"
+                                        android:textSize="18sp"/>
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="center"
+                                    android:maxLines="2"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/his_biography_TV"
+                                    android:textStyle="normal"
+                                    android:padding="5dp"
+                                    android:lines="2"
+                                    android:textSize="14sp"/>
+
+                                <Button
+                                    android:id="@+id/sendMessageBTN"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Message"
+                                    android:textColor="@color/black"
+                                    android:textAllCaps="true"
+                                    android:textStyle="bold"
+                                    android:layout_margin="5dp"
+                                    android:textSize="14sp"
+                                    android:singleLine="true"
+                                    android:background="@drawable/transparent_circle_with_border"
+                                    android:backgroundTint="@color/colorPrimaryDark"/>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="1dp"
+                        android:id="@+id/hisProfileDetails"
+                        app:cardUseCompatPadding="true"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="5dp"
+                        android:layout_margin="5dp"
+                        android:background="@color/grey_font"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:weightSum="3"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="10dp"
+                                android:id="@+id/hisPosts"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Menyaka"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="14sp"
+                                    android:singleLine="true"
+                                    android:textAllCaps="true"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/hisPostsCounter"
+                                    android:textStyle="bold"
+                                    android:singleLine="true"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="10dp"
+                                android:id="@+id/hisFollowers"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Followers"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textStyle="bold"
+                                    android:singleLine="true"
+                                    android:textSize="14sp"
+                                    android:textAllCaps="true" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/hisFollowersCounter"
+                                    android:textStyle="bold"
+                                    android:singleLine="true"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="10dp"
+                                android:id="@+id/hisFollowing"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Following"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="14sp"
+                                    android:singleLine="true"
+                                    android:textAllCaps="true" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/hisFollowingCounter"
+                                    android:textStyle="bold"
+                                    android:singleLine="true"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hisProfileTabLayout"
+                android:background="@drawable/ctr_bg"
+                app:tabSelectedTextColor="@color/white"
+                app:tabIndicatorColor="@color/white"
+                app:tabIndicatorHeight="2dp"
+                android:overScrollMode="ifContentScrolls"
+                app:tabMode="fixed"
+                app:tabTextColor="@color/white" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:id="@+id/hisProfileViewPager" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="RtlSymmetry"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:id="@+id/nameLayout">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/contactProPic"
+            android:src="@drawable/profile_png_1114185"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp"
+            app:civ_border_overlay="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/contactProPic"
+            android:orientation="vertical"
+            android:layout_toStartOf="@+id/invitationBTN"
+            android:padding="5dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/contactName"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/personalNumber"
+                android:textStyle="italic"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textStyle="bold"
+             android:layout_alignParentEnd="true"
+             android:textColor="@color/black"
+             android:textAllCaps="true"
+             android:id="@+id/invitationBTN"
+             android:text="INVITE"
+             android:padding="10dp"
+             android:background="@drawable/transparent_circle_with_border"
+             android:layout_centerVertical="true"
+             android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

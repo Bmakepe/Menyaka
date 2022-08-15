@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_alignParentTop="true"
+        android:id="@+id/messAppBar"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:id="@+id/mess_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:layout_alignParentStart="true"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                app:tint="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:id="@+id/cartBackBTN"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_toEndOf="@+id/cartBackBTN"
+                android:layout_centerVertical="true"
+                android:text="@string/complete_purchase"
+                android:textColor="@color/black"
+                android:id="@+id/cartHeader"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:layout_toStartOf="@+id/shopCategoryBTN"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_store_dark"
+                app:tint="@color/black"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:id="@+id/shopCategoryBTN"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cart_items_Recycler"
+        android:layout_below="@+id/messAppBar"
+        android:layout_above="@+id/placeOrderBTN1"/>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/placeOrderBTN1"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/placeOrderBTN"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:id="@+id/totalPrice"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proceed To Pay"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"
+            android:drawablePadding="5dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+            android:textAllCaps="true"
+            android:id="@+id/placeOrderBTN"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            tools:ignore="UseCompatTextViewDrawableXml"
+            app:drawableTint="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

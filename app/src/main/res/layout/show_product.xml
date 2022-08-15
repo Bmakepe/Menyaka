@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/productImages"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        app:iss_auto_cycle="true"
+        app:iss_period="4500"
+        app:iss_delay="0"/>
+
+    <ImageView
+        android:id="@+id/close_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        app:tint="@color/colorPrimary" />
+
+</RelativeLayout>

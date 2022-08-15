@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/ll_final_payment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/orderDetailsToolbar"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            app:tint="@color/white"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:id="@+id/paymentBackBTN"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Details"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/orderDetailsToolbar"
+        android:layout_above="@+id/orderDetailsArea">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:elevation="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Shipping Details"
+                        android:textAllCaps="true"
+                        android:layout_marginBottom="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:id="@+id/preferredMethod"
+                        android:textSize="16sp"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#C5C1C1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/subject">
+
+                            <TextView
+                                android:text="Name:"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:singleLine="true"
+                                android:textStyle="bold"
+                                android:textAlignment="textEnd"
+                                android:layout_gravity="end"
+                                android:textColor="@color/black"
+                                android:padding="5dp"/>
+
+                            <TextView
+                                android:text="Contacts:"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:singleLine="true"
+                                android:layout_gravity="end"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/black"
+                                android:padding="5dp"/>
+
+                            <TextView
+                                android:text="Address: "
+                                android:textStyle="bold"
+                                android:padding="5dp"
+                                android:textSize="14sp"
+                                android:textAlignment="textEnd"
+                                android:layout_gravity="end"
+                                android:textColor="@color/black"
+                                android:singleLine="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_toEndOf="@+id/subject">
+
+                            <TextView
+                                android:id="@+id/recipientName"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:padding="5dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/recipientContacts"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:padding="5dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/finalDeliveryAddress"
+                                android:layout_width="match_parent"
+                                android:maxLines="4"
+                                android:padding="5dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:elevation="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Product Details"
+                            android:textAllCaps="true"
+                            android:layout_marginBottom="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:singleLine="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View More"
+                            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+                            android:layout_alignParentEnd="true"
+                            android:drawableTint="@color/black"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:layout_centerVertical="true"
+                            android:drawablePadding="5dp"
+                            android:id="@+id/viewMoreProducts"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#C5C1C1" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/confirmedProductsRecycler"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderDetailsArea"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finish"
+            android:textSize="18sp"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:id="@+id/payment_btn"
+            android:layout_margin="5dp"
+            app:drawableTint="@color/white"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

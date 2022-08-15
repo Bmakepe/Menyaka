@@ -1,0 +1,160 @@
+<resources>
+    <string name="app_name">Menyaka</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login">SIGN IN</string>
+    <string name="show_pwd">Show Password</string>
+    <string name="hide_pwd">Hide Password</string>
+    <string name="forgot">Forgot password?</string>
+    <string name="closebutton">Close Button for Activity</string>
+    <string name="newUser">Not a Member yet? Sign Up here.</string>
+    <string name="fullName">Full Name</string>
+    <string name="mobileNumber">Mobile Number</string>
+    <string name="location">Location</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="signUp">SIGN UP</string>
+    <string name="already_user">Already have Account? Login here.</string>
+    <string name="registered_emailid">Please enter your Registered Email Id below:</string>
+    <string name="submit">SUBMIT</string>
+    <string name="back">BACK</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="Subscription">SUBSCRIBE</string>
+    <string name="headline">Lesotho Live Feed goes Live in 10 Days</string>
+    <string name="intro">Welcome To Menyaka</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="verify">Verify</string>
+    <string name="title_activity_bottom">bottomActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="app_username">App Username</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Posts">posts</string>
+    <string name="Followers">followers</string>
+    <string name="Following">following</string>
+    <string name="Follow">Follow</string>
+    <string name="Unfollow">Unfollow</string>
+    <string name="EditProfile">Edit Profile</string>
+    <string name="SettingOptions">Options</string>
+    <string name="SignOut">Sign out</string>
+    <string name="UserName">User name</string>
+    <string name="DisplayName">Display name</string>
+    <string name="Phone">Phone</string>
+    <string name="Email">Email</string>
+    <string name="Website">Website</string>
+    <string name="Description">Description</string>
+    <string name="Password">Password</string>
+    <string name="ConfirmPassword">Confirm password</string>
+    <string name="Login">Login</string>
+    <string name="Register">Register</string>
+    <string name="private_information">PRIVATE INFORMATION</string>
+    <string name="AccountSettings">Account settings</string>
+    <string name="ChangePhoto">Change photo</string>
+    <string name="Gallery">Gallery</string>
+    <string name="Photo">Photo</string>
+    <string name="Video">Video</string>
+    <string name="Next">Next</string>
+    <string name="filePath">mPath</string>
+    <string name="mediaData">media</string>
+    <string name="profilePhoto">ProfilePhoto</string>
+    <string name="Share">Share</string>
+    <string name="speech_prompt">Say something!</string>
+    <string name="Caption">Write a caption</string>
+    <string name="UploadProfilePhoto">UPLOAD_PROFILE</string>
+    <string name="updatingProfile">Updating profile</string>
+    <string name="Comments">Comments</string>
+    <string name="PostComment">Post</string>
+    <string name="AddComment">Add your comment…</string>
+    <string name="Wait">Please wait…</string>
+    <string name="Search">Search…</string>
+
+    <!---Fragment names-->
+    <string name="GalleryFragment">GALLERY</string>
+    <string name="PhotoFragment">PHOTO</string>
+    <string name="VideoFragment">VIDEO</string>
+
+
+    <!---Fire base-->
+    <string name="users_node">users</string>
+    <string name="user_account_settings_node">user_account_settings</string>
+    <string name="user_photos_node">user_photos</string>
+    <string name="user_videos_node">user_videos</string>
+    <string name="videos_node">videos</string>
+    <string name="photos_node">photos</string>
+    <string name="usernameField">username</string>
+    <string name="fieldLikes">likes</string>
+    <string name="fieldComments">comment</string>
+    <string name="fieldComment">comment</string>
+    <string name="dateField">date_added</string>
+    <string name="emailField">email</string>
+    <string name="users_id">user_id</string>
+    <string name="displayNameField">display_name</string>
+    <string name="descriptionField">description</string>
+    <string name="websiteField">website</string>
+    <string name="phoneNoField">phone_number</string>
+    <string name="profilePhotoField">profile_photo</string>
+    <string name="node_followers">followers</string>
+    <string name="node_following">following</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hot_deal_preview">hot_deal_preview</string>
+    <string name="camera_preview">camera_preview</string>
+    <string name="share_experience">Share Experience</string>
+    <string name="tag_friends">Tag Friend(s)</string>
+    <string name="check_in">Check In</string>
+    <string name="nyakalla">Nyakalla</string>
+    <string name="dummy_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here</string>
+    <string name="add_to_favourates">Add To Favourates</string>
+    <string name="my_store">My Store</string>
+    <string name="complete_purchase">My Shopping Basket</string>
+    <string name="record_audio">Record Audio</string>
+    <string name="send_message">Send Message</string>
+    <string name="payment_process">Please take note of the merchant details as you are about the process their payment.
+        Below are the instructions on how to process the payment.
+        <br /> 1. Select to option 4: Ecocash
+        <br /> 2.
+        <br /> 3.
+        <br /> 4.
+        <br /> 5.
+        <br /> 6.
+
+    </string>
+
+    <string name="about_dialog_title">About</string>
+    <string name="about_dialog_message">CameraKit is open source software distributed under the MIT license.\n\nFor more details visit www.camerakit.website/.</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+</resources>
