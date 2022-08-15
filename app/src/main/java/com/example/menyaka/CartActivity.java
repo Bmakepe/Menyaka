@@ -40,16 +40,16 @@ import java.util.HashMap;
 public class CartActivity extends AppCompatActivity {
 
     //for displaying products in the cart for checkout
-    ArrayList<CartItems> cartItemsList;
-    CartAdapter cartAdapter;
-    RecyclerView cartRecycler;
+    private ArrayList<CartItems> cartItemsList;
+    private CartAdapter cartAdapter;
+    private RecyclerView cartRecycler;
 
-    ImageView cart_close;
-    TextView totalPayment, cartHeader;
-    FirebaseUser user;
-    DatabaseReference cartRef;
+    private ImageView cart_close;
+    private TextView totalPayment, cartHeader;
+    private FirebaseUser user;
+    private DatabaseReference cartRef;
 
-    String storeID, myStoreName, key;
+    private String storeID, myStoreName, key;
     int totalBill;
 
     @Override
